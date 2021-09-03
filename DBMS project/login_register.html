@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="home.css">
+    
+        <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        <title>login</title>
+       
+    <body style="background-image: url('3.jpg');">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Organic Milk</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="homepage.html">Home </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="login_register.html">Login/Register<span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+              
+            </div>
+          </nav>
+         
+           <div class="card" style="width: 18rem;" id="card1" >
+            <form class="form" id='login' onsubmit="return validate()" method='POST' action="login.php">
+            
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center; ">SIGN IN</h1>
+             <label for="inputusername" class="sr-only">Username</label>
+              <input type="text" id="inputusername" name="inputusername" class="form-control" placeholder="Username" required="" autofocus="">
+              
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required="">
+              <div id="err2">Atleast enter 8 character(alphanumeric)</div>
+              <br>
+              <input  type="submit" class="btn btn-primary" onsubmit="validate()" value="Login" >
+            </form>
+            <br>
+            <br>
+            <p>don't have an account? <a href="Register.html">Register here</a></p>
+           </div>
+           
+
+           <script>
+             // const myform =document.getElementById("login");
+             const use=document.getElementById("inputusername");
+             const pw=document.getElementById("inputPassword");
+             const er1=document.getElementById('err2');
+            // localStorage.setItem("uname",use.value);
+             //myform.addEventListener("submit", (e) => {
+               //e.preventDefault();
+                //console.log("form has been submitted");
+                //document.location.href='Farmer.html';
+                //validate();
+               
+
+              //});
+              function validate() {
+                const pwd=pw.value;
+                console.log(pwd);
+                if (pwd.length < 8) {
+                  console.log('errors');
+                  er1.style.display = 'block'; 
+                  return false;
+
+                } else {
+                  er1.style.display = 'none';
+                  console.log("form has been submitted");
+                  //window.location.href('farmer.php');
+                  return true;
+                }
+
+                
+              }
+           </script>
+          
+         
+           
+
+          
+    </body>
+
+ </html>

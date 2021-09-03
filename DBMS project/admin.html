@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="home.css">
+        
+        <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        <title>Admin</title>
+       
+    </head>
+    <body style="background-image: url('https://www.pcquest.com/wp-content/uploads/2018/01/Background-Screening.png');">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Organic Milk</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+          
+          </nav>
+          <div class="card" style="width: 78rem; background-image: url('https://www.victig.com/wp-content/uploads/2019/07/output-onlinepngtools-2.png');" id="card2"  >
+          
+          <form  id="reg" action="admin_help.php" method="POST">
+            <h1 style="text-align: center;">Add Employee Details</h1>  
+            <div class="form-row">
+              
+              <div class="form-group col-md-6">
+                <label for="inputname">Name</label>
+                <input type="text" class="form-control" id="inputname" name="inputname" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputusername">Username</label>
+                <input type="text" class="form-control" id="inputusername" name="inputusername" required>
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputPassword5">Password</label>
+                    <input type="password" class="form-control" id="inputPassword5" name="inputPassword5" required>
+                    <div id="err1">please enter valid password</div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputmobileno">Mobile No</label>
+                    <input type="tel" class="form-control" id="inputmobileno" name="inputmobileno" placeholder="mobileno" required>
+                    <div id="err3">please enter valid mobile number</div>
+                  </div>
+              </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="door no,street,area with comma" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City</label>
+                  <input type="text" class="form-control" id="inputCity" name="inputCity" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State</label>
+                  <select id="inputState" class="form-control" name="inputState">
+                    <option selected>Choose...</option>
+                    <option>Tamil Nadu</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Pin Code</label>
+                  <input type="text" class="form-control" id="inputZip" name="inputZip" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                
+                <div class="form-group col-md-6">
+                    <label for="inputdob">date of birth</label>
+                    <input type="date" class="form-control" id="inputdob" name="inputdob" placeholder="date of birth" required> 
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputdate">Joining Date</label>
+                    <input type="date" class="form-control" id="inputdate" name="inputdate"  required>
+                  </div>
+                  
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputsalary">Salary</label>
+                    <input type="number" class="form-control" id="inputsalary" name="inputsalary"  required> 
+                  </div> 
+                  <div class="form-group col-md-6">
+                    <label for="inputdept">department</label>
+                    <input type="text" class="form-control" id="inputdept" name="inputdept"  required> 
+                  </div> 
+              </div>
+           
+              <h3>Bank Details</h3>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="exampleInputaccountno">Account No</label>
+                  <input type="number" class="form-control" id="exampleInputaccountno" name="exampleInputaccountno" aria-describedby="emailHelp" required>
+                  </div>
+                <div class="form-group col-md-6">
+                  <label for="inputbk">Bank Name</label>
+                  <input type="text" class="form-control" id="inputbk" name="inputbk" required>
+                </div>
+              </div>   
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputIFSC">IFSC code</label>
+                            <input type="text" class="form-control" id="inputIFSC" name="inputIFSC" required>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputMICR">MICR code</label>
+                          <input type="text" class="form-control" id="inputMICR" name="inputMICR" required>
+                        </div>
+                      </div>      
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="branch">Branch</label>
+                          <input type="text" class="form-control" id="branch" name="branch" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label for="City">City</label>
+                          <input type="text" class="form-control" id="City" name="City" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label for="State">State</label>
+                          <select id="State" class="form-control" name="State">
+                            <option selected>Choose...</option>
+                            <option>Tamil Nadu</option>
+                          </select>
+                        </div>
+                        
+                      </div>    
+                      
+              
+  
+                    <input  type="submit" class="btn btn-primary" value="Add" >
+             </form>
+            </div>
+
+            <div class="card" style="width: 78rem; background-image: url('https://www.victig.com/wp-content/uploads/2019/07/output-onlinepngtools-2.png');" id="card2"  >
+          
+                <form  id="reg" action="delmem.php" method="POST">
+                  <h1 style="text-align: center;">Delete Members from society</h1>  
+                  <div class="form-row">
+                    
+                    <div class="form-group col-md-6">
+                      <label for="inputmemid">Member id</label>
+                      <input type="text" class="form-control" id="inputmemid" name="inputmemid" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputname1">Name</label>
+                      <input type="text" class="form-control" id="inputname1" name="inputname1" required>
+                    </div>
+                  </div>
+                     
+                    
+        
+                          <input  type="submit" class="btn btn-primary" value="Delete" >
+                   </form>
+                  </div>
+                  <div class="card" style="width: 78rem; background-image: url('https://www.victig.com/wp-content/uploads/2019/07/output-onlinepngtools-2.png');" id="card2"  >
+          
+                    <form  id="reg" action="delemp.php" method="POST">
+                      <h1 style="text-align: center;">Delete Employee</h1>  
+                      <div class="form-row">
+                        
+                        <div class="form-group col-md-6">
+                          <label for="inputempid">Employee id</label>
+                          <input type="text" class="form-control" id="inputempid" name="inputempid" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputname2">Name</label>
+                          <input type="text" class="form-control" id="inputname2" name="inputname2" required>
+                        </div>
+                      </div>
+                         
+                        
+            
+                              <input  type="submit" class="btn btn-primary" value="Delete" >
+                       </form>
+                      </div>
+                </body>
+
+            </html>

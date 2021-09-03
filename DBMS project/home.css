@@ -1,0 +1,44 @@
+*{
+    font-family: 'Bree Serif', serif;
+}
+
+#card1 {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    margin-top:100px;
+    padding: 20px 60px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 16px 6px rgba(0,0,0,0.5);
+}
+#log {
+    border-radius: 15px;
+   padding-right: 50px;
+   text-align: center;
+   margin: auto;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+#card2{
+    margin: auto ;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 16px 6px rgba(0,0,0,0.5);
+    padding: 20px 60px;
+    margin-bottom: 20px;
+    background-image: url('https://thumbs.dreamstime.com/z/abstract-background-illustration-clouds-pasture-cattle-goats-birds-agriculture-dairy-industry-animals-husbandry-website-137554295.jpg');
+
+}
+#err1,#err2,#err3{
+    color: red;
+    display: none;
+
+}
+

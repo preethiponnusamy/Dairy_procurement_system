@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="home.css">
+        
+        <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        <title>Register</title>
+       
+    </head>
+    <body style="background-image: url('https://thumbs.dreamstime.com/b/seamless-horizontal-rural-landscape-fields-dairy-farm-cows-vector-background-seamless-horizontal-rural-landscape-hills-fields-185934037.jpg');">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Organic Milk</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+          
+          </nav>
+          <div class="card" style="width: 78rem;" id="card2"  >
+          
+          <form  id="reg" onsubmit="return valid()" action="up.php" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                        <label for="inputid">MEM id</label>
+                        <input type="number" class="form-control" id="inputid" name="inputid" required>
+                      </div>
+              <div class="form-group col-md-3">
+                <label for="inputname">Name</label>
+                <input type="text" class="form-control" id="inputname" name="inputname" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputusername">Username</label>
+                <input type="text" class="form-control" id="inputusername" name="inputusername" required>
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputPassword5">Password</label>
+                    <input type="password" class="form-control" id="inputPassword5" name="inputPassword5"  required>
+                    <div id="err1">Atleast enter 8 character(alphanumeric)</div>
+                  </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Confirm Password</label>
+                  <input type="password" class="form-control" id="inputPassword4" name="inputPassword4" required>
+                  <div id="err2">password mismatch</div>
+                </div>
+              </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="door no,street,area with comma" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City</label>
+                  <input type="text" class="form-control" id="inputCity" name="inputCity" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State</label>
+                  <select id="inputState" class="form-control" name="inputState">
+                    <option selected>Choose...</option>
+                    <option>Tamil Nadu</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Pin Code</label>
+                  <input type="text" class="form-control" id="inputZip" name="inputZip" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputmobileno">Mobile No</label>
+                    <input type="tel" class="form-control" id="inputmobileno" name="inputmobileno" placeholder="mobileno" required>
+                    <div id="err3">please enter valid mobile number</div>
+                  </div>
+               
+                
+              </div>
+           
+  
+                    <input  type="submit" class="btn btn-primary" value="Update" >
+             </form>
+            </div>
+            
+            <script>
+            function valid(){
+              const user=document.getElementById("inputusername");
+              const pwd=document.getElementById("inputPassword5");
+              const cpwd=document.getElementById("inputPassword4");
+              const er1=document.getElementById("err1");
+              const er2=document.getElementById("err2");
+              const er3=document.getElementById("err3");
+              const mob=document.getElementById("inputmobileno");
+              const pw=pwd.value;              
+              const cpw=cpwd.value;
+              let count=0;
+              //localStorage.setItem("uname",user.value);
+                
+
+                if(pw.length >= 8){                  
+                  er1.style.display = 'none';
+                }
+                else{
+                  count++;
+                  er1.style.display = 'block';
+                  console.log(pw);
+                  return false;
+                }
+              
+                if(pw!=cpw){
+                    count++;
+                    er2.style.display = 'block';
+                    return false;
+                }
+                else{
+                  er2.style.display = 'none';
+                }
+              
+                if(mob.value.length !=10){
+                  count++;
+                   er3.style.display = 'block';
+                   return false;
+                }
+                else{
+                  er3.style.display = 'none';
+
+                }
+                if(count==0){
+                  return true;
+                }
+               
+              } 
+              
+            </script>
+    </body>
+</html>
